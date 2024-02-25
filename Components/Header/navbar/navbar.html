@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+
+
+
+      <link rel="stylesheet" href="navbar.css">
+
+      <title>Docker</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               <a href="#" class="nav__logo">
+                <img src="https://up.yimg.com/ib/th?id=OIP.k5Uw1kQFbexG5NDgDFa2rQHaHa&%3Bpid=Api&rs=1&c=1&qlt=95&w=112&h=112" class="docker-logo"> 
+               </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                 
+               </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+             
+
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        products <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="#" class="dropdown__link">
+                            Docker Desktop
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                           Docker Hub
+                           </a>
+
+                        </li>
+ <li>
+                           <a href="#" class="dropdown__link">
+                           Docker  Build Cloud
+                           </a></li>
+                    <li>    <a href="#" class="dropdown__link">
+                            Docker Scout
+                            </a></li>
+                           <li><a href="#" class="dropdown__link">
+                              Product Roadmap
+                                </a></li>
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                            </li>
+                  
+ 
+</ul>
+</li>
+                  <!--=============== DROPDOWN 2 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                       Developers <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="#" class="dropdown__link">
+                             Documentation
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                          Getting started
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                            Trainings
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown__link">
+                      Extensions SDK
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#" class="dropdown__link">
+                            Community
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#" class="dropdown__link">
+                          Open Source
+                            </a>
+                         </li>
+                         <li>
+                            <a href="#" class="dropdown__link">
+                          Preview program
+                            </a>
+                         </li>
+                     </ul>
+                  </li>
+
+                  <li><a href="#" class="nav__link">Pricing</a></li>
+                  <li><a href="#" class="nav__link">Support</a></li>
+                  <li><a href="#" class="nav__link">Blog</a></li>
+                  <li class="dropdown__item">
+                    <div class="nav__link">
+                      Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+
+                    <ul class="dropdown__menu">
+                       <li>
+                          <a href="#" class="dropdown__link">
+                            About us
+                          </a>                          
+                       </li>
+
+                       <li>
+                          <a href="#" class="dropdown__link">
+                         Getting started
+                          </a>
+                       </li>
+
+                       <li>
+                          <a href="#" class="dropdown__link">
+                        What is a container?
+                          </a>
+                       </li>
+                       <li>
+                           <a href="#" class="dropdown__link">
+                     Why Docker
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="dropdown__link">
+                           Trust
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="dropdown__link">
+                      Partners
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" class="dropdown__link">
+                        Events
+                           </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown__link">
+                         Swag Store
+                            </a>
+                         </li>
+                         <li >
+                            <a href="#" class="dropdown__link">
+                      Careers
+                            </a>
+                         </li>
+                         <li >
+                            <a href="#" class="dropdown__link">
+                      Contact us
+                            </a>
+                         </li>
+                    </ul>
+                 </li>
+                </ul>
+
+               
+            </div>
+           <div class="buttons">
+            <i class="fa fa-search"></i>
+            <button class="btn btn-primary">Sign in</button>
+
+            <button class="btn btn-secondary">Get started</button>
+           </div>
+         </nav>
+    
+      </header>
+
+   
+
+
+
+<script>
+const showMenu = (toggleId, navId) =>{
+   const toggle = document.getElementById(toggleId),
+         nav = document.getElementById(navId)
+
+   toggle.addEventListener('click', () =>{
+       // Add show-menu class to nav menu
+       nav.classList.toggle('show-menu')
+
+       // Add show-icon to show and hide the menu icon
+       toggle.classList.toggle('show-icon')
+   })
+}
+
+showMenu('nav-toggle','nav-menu');
+</script>
+</body>
+</html>

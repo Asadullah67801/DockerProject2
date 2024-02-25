@@ -1,0 +1,407 @@
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+
+ul {
+  list-style: none;
+  /* Color highlighting when pressed on mobile devices */
+  /*-webkit-tap-highlight-color: transparent;*/
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+ 
+}
+
+.docker-logo{
+   height:70px;
+   width:120px;
+}
+
+/*=============== HEADER ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0D1456;
+ 
+}
+
+/*=============== NAV ===============*/
+
+.nav__burger{
+inset:0;
+position:absolute;
+  color:white;
+  font-size:28px;
+}
+
+.nav__data {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.nav__toggle {
+  position:relative;
+  width: 32px;
+  height: 32px;
+}
+
+
+
+
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1118px) {
+  .nav__menu {
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 100%;
+    
+color:white;
+height:300;
+    background-color:#1d63ed;
+    padding:12px;
+  
+    pointer-events: none;
+    opacity: 0;
+    transition: top .4s, opacity .3s;
+  }
+  .buttons{
+    display:none;
+  }
+  .show-menu {
+    opacity: 1;
+  
+    top: 100px;
+    pointer-events: initial;
+  }
+  .nav__menu::-webkit-scrollbar {
+    width: 0;
+   
+  }
+  .nav__list  li a{
+   color: white;
+   margin:10px;
+  
+   
+  }
+  .nav__list a:hover{
+    text-decoration:underline;
+    color:white;
+  }
+}
+
+.nav__link {
+ 
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color .3s;
+}
+
+
+/* Show menu */
+.show-menu {
+  
+  top: 80px;  pointer-events: initial;
+}
+
+/* Show icon */
+.show-icon .nav__burger {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+
+/*=============== DROPDOWN ===============*/
+.dropdown__item {
+  cursor: pointer;
+}
+.buttons{
+    cursor:pointer'
+top:15px;
+position: relative;
+}
+
+.btn-primary{
+    padding:12px 17px;
+    border:1px solid white;
+    color:White;
+    background-color:transparent;
+    border-radius:5px;
+    font-weight:bolder;
+    margin-right:8px;
+}
+.btn-secondary{
+    background-color: white;
+ 
+    padding:12px 8px;
+    font-weight:bolder;
+    font-size: 17px;
+    border:none;
+    border-radius:5px;
+}
+
+.dropdown__arrow {
+  font-size: 15px;
+  font-weight: initial;
+  transition: transform .4s;
+}
+
+
+.dropdown__link{
+    display:none;
+}
+
+.dropdown__link:hover
+ {
+ 
+    display:block;
+
+}
+
+
+/* Show dropdown menu & submenu */
+
+
+/* Rotate dropdown icon */
+.dropdown__item:hover .dropdown__arrow {
+  transform: rotate(180deg);
+}
+
+/*=============== DROPDOWN SUBMENU ===============*/
+
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+  .buttons{
+    display: none;
+  }
+  .nav__burger{
+    display: block;
+
+  }
+  .dropdown__menu {
+    display:none;
+  }
+
+  .dropdown__menu .dropdown__link:hover{
+    display:block;
+  }
+  
+  .dropdown__link{
+    color: white;
+background-color: #1d63ed;
+  }
+  .nav__link{
+    color:white;
+    background-color: #1d63ed;
+
+  }
+
+
+
+  .dropdown__link, 
+.dropdown__sublink {
+ padding: 20px 10px;
+   background-color:#1d63ed;
+  display: flex;
+  align-items: center;
+ 
+ 
+ 
+}
+
+  .nav__link {
+    padding-inline: 1rem;
+  }
+}
+@media(max-width:900px){
+    .dropdown__link{
+        color: white;
+    background-color: #1d63ed;
+      }
+      .nav__link{
+        color:white;
+        background-color: #1d63ed;
+      }
+    
+    
+    
+      .dropdown__link, 
+    .dropdown__sublink {
+     padding: 20px 10px;
+       background-color:#1d63ed;
+      display: flex;
+      align-items: center;
+     
+     
+     
+    }
+    .buttons{
+        display: none;
+    }
+}
+
+@media(max-width:700px){
+    .dropdown__link{
+        color: white;
+    background-color: #1d63ed;
+      }
+      .nav__link{
+        color:white;
+        background-color: #1d63ed;
+      }
+      .buttons{
+        display: none;
+      }
+    
+    
+    
+      .dropdown__link, 
+    .dropdown__sublink {
+     padding: 20px 10px;
+       background-color:#1d63ed;
+      display: flex;
+      align-items: center;
+     
+     
+     
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1118px) {
+  .container {
+    margin-inline: auto;
+  }
+  .dropdown__link, 
+  .dropdown__sublink {
+  
+
+     background-color:white;
+     box-shadow:2px 2px 2px 2px rgba(0,0,0,0.3);
+    display: flex;
+width:300px;
+padding:20px;
+border-radius: 5px;
+
+
+transform:translateX(-30%);
+   
+   
+   
+  }
+  .dropdown__link{
+    color: black;
+  }
+  .nav__link{
+    color:white;
+  }
+  
+  .nav {
+ 
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    height: 100%;
+    display: flex;
+    column-gap: 3rem;
+  }
+  .nav__link {
+    height: 100%;
+    padding: 0;
+    justify-content: initial;
+
+  }
+  
+
+  .dropdown__item, 
+  .dropdown__subitem {
+    position: relative;
+  }
+
+  .dropdown__menu, 
+  .dropdown__submenu {
+    max-height: initial;
+    overflow: initial;
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s, top .3s;
+  }
+
+  .dropdown__link, 
+  .dropdown__sublink {
+    padding-inline: 1rem 3.5rem;
+  }
+
+  .dropdown__subitem .dropdown__link {
+    padding-inline: 1rem;
+  }
+
+  .dropdown__submenu {
+    position: absolute;
+    left: 100%;
+    top: .5rem;
+  }
+ .dropdown__item{
+    color:white;
+ }
+  
+
+  /* Show dropdown menu */
+  .dropdown__item:hover .dropdown__menu {
+    opacity: 1;
+    top: 5.5rem;
+    pointer-events: initial;
+    transition: top .3s;
+  }
+
+  /* Show dropdown submenu */
+  .dropdown__subitem:hover > .dropdown__submenu {
+    opacity: 1;
+    top: 0;
+    pointer-events: initial;
+    transition: top .3s;
+  }
+  .nav_list li a{
+    color:white;
+  }
+}
