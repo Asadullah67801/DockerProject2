@@ -1,0 +1,123 @@
+
+
+/* General styles */
+body {
+    margin: 0; /* Remove default margin */
+    font-family: sans-serif;
+    padding:0px;
+}
+*{
+    margin:0px;
+    padding:0px;
+}
+
+
+
+
+.top_container{
+    text-align:center;
+}
+/* Card styles */
+.card {
+    display: inline-block; /* Allow cards to wrap in smaller screens */
+  
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box; /* Include padding in width calculation */
+    width: calc(90% - 20px); /* Adjust width for 2 columns */
+}
+
+.card img {
+    width: 100%; /* Ensure images fill card width */
+    height: auto;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    /* Mobile styles */
+    .card-row {
+     display:grid;
+     grid-template-columns: repeat(2,4fr);
+
+        /* Adjust gap as needed */
+        margin:0 25px;
+    }
+    .third--container{
+       
+        background-color:#F9F9FA;
+        text-align: center;
+    }
+   .text-small{
+        text-align:center;
+        margin:15px 0;
+        line-height:1.4;
+        font-size:19px;
+    }
+    .sub--heading-top{
+        font-size:17px;
+       margin:10px 0;
+        color:#041564;
+    }
+    .section-heading{
+margin:15px 0;
+        font-size:30px;
+    }
+    .top_container{
+        margin:0 25px;
+    }
+
+    .card {
+        width: calc(100% - 2px); /* Adjust width for 2 columns */
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    /* Desktop styles */
+    .card-row {
+        display: grid;
+        padding:0 70px;
+        grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+       grid-gap:0px;
+    
+    }
+   
+    .third--container{
+       padding:50px 0;
+        background-color:#F9F9FA;
+        text-align: center;
+        
+    }
+    .top_container{
+        margin: 0 50px;
+    }
+   .text-small{
+
+        text-align: center;
+        margin-top:25px;
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom:20px;
+    }
+    .section-heading{
+
+        font-size:45px;
+    }
+}
+
+@media(max-width:320px){
+    .third--container{
+        margin:0 15px;
+
+    }
+    .card-row{
+        display:grid;
+        grid-template-columns:repeat(2,4fr);
+        margin:0 15px;
+
+    }
+    .text-small{
+        font-size:15px;
+    }
+}
